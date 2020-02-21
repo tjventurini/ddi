@@ -22,7 +22,7 @@ if (!function_exists('ddi')) {
         $line = $trace[1]['line'];
 
         // create signature path
-        $path = "{$class}::{$method} - line:{$line}";
+        $path = "{$class}::{$method} @line:{$line}";
 
         // call dd with path
         dd($path, ...$vars);
@@ -41,7 +41,7 @@ if (!function_exists('dumpi')) {
         $line = $trace[1]['line'];
 
         // create signature path
-        $path = "{$class}::{$method} - line:{$line}";
+        $path = "{$class}::{$method} @line:{$line}";
 
         // call dd with path
         dump($path, ...$vars);
