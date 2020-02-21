@@ -18,9 +18,16 @@ namespace Acme\Foo;
 
 class Bar {
     public function baz() {
+        // dump and die
         ddi('example');
+
+        // dump and continue
+        dumpi('example');
     }
 }
 ```
 
-This will add the string `Acme\Foo\Bar::baz` as first variable to your `dd()` output.
+This will add the string `Acme\Foo\Bar::baz` as first variable to your `dd()` output. The `dumpi()` helper method
+ works the same way, but for the `dump()` helper method.
+ 
+For more information about the `dd()` and `dump()` method take a look at the [documentation](https://laravel.com/docs/helpers).
