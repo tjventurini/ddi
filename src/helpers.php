@@ -19,11 +19,31 @@ if (!function_exists('ddi')) {
         // get class and method
         $class = $trace[1]['class'];
         $method = $trace[1]['function'];
+        $line = $trace[1]['line'];
 
         // create signature path
-        $path = "{$class}::{$method}";
+        $path = "{$class}::{$method} - line:{$line}";
 
         // call dd with path
         dd($path, ...$vars);
+    }
+}
+
+if (!function_exists('dumpi')) {
+    function dumpi(...$vars)
+    {
+        // get trace
+        $trace = debug_backtrace();
+
+        // get class and method
+        $class = $trace[1]['class'];
+        $method = $trace[1]['function'];
+        $line = $trace[1]['line'];
+
+        // create signature path
+        $path = "{$class}::{$method} - line:{$line}";
+
+        // call dd with path
+        dump($path, ...$vars);
     }
 }
