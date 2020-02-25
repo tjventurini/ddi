@@ -1,7 +1,13 @@
 {
     "name": "tjventurini/ddi",
     "description": "Helper to dd with more comfort.",
-    "type": "package, laravel",
+    "type": "package",
+    "tags": [
+        "laravel",
+        "package",
+        "debug",
+        "ddi"
+    ],
     "license": "MIT",
     "authors": [
         {
