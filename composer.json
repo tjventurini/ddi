@@ -13,6 +13,10 @@
         {
             "name": "Thomas Venturini",
             "email": "thomas@venturini.codes"
+        },
+        {
+            "name": "Sean Moghadam",
+            "email": "sean@du.digital"
         }
     ],
     "require": {

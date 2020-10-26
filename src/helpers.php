@@ -11,7 +11,7 @@
  */
 
 if (!function_exists('ddi_dump_path')) {
-    function ddi_dump_path(...$vars)
+    function ddi_dumpi_path(...$vars)
     {
         // get trace
         $trace = debug_backtrace();
@@ -39,7 +39,7 @@ if (!function_exists('ddi')) {
     function ddi(...$vars)
     {
         // get the path to use it as header
-        $path = ddi_dump_path();
+        $path = ddi_dumpi_path();
 
         // call dd with path
         dd($path, ...$vars);
@@ -50,7 +50,7 @@ if (!function_exists('dumpi')) {
     function dumpi(...$vars)
     {
         // get the path to use it as header
-        $path = ddi_dump_path();
+        $path = ddi_dumpi_path();
 
         // call dd with path
         dd($path, ...$vars);
