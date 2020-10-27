@@ -24,7 +24,7 @@ if (!function_exists('ddi_dump_path')) {
 
         // fill the path
         $path = '';
-        if ($method === '{closure}') {
+        if (preg_match('/\{closure\}/', $method)) {
             $path .= "{$file}:{$line}";
         } else {
             $path .= "{$class}::{$method} @line:{$line}";
