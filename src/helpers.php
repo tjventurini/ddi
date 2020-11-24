@@ -53,6 +53,6 @@ if (!function_exists('dumpi')) {
         $path = ddi_dumpi_path();
 
         // call dd with path
-        dd($path, ...$vars);
+        dump($path, ...$vars);
     }
 }
