@@ -38,6 +38,12 @@ if (!function_exists('ddi_dump_path')) {
 if (!function_exists('ddi')) {
     function ddi(...$vars)
     {
+        // set some header infos to prevent cors error
+        //  on client side
+        header('Access-Control-Allow-Origin: *');
+        header('Access-Control-Allow-Methods: *');
+        header('Access-Control-Allow-Headers: *');
+     
         // get the path to use it as header
         $path = ddi_dumpi_path();
 
